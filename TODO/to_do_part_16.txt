@@ -1,0 +1,6 @@
+part 16 - Todolist
+
+-DONE Create app for orders
+-DONE Create database model for orders
+-DONE Create view and url for the checkout
+-DONE List correct orders in my account

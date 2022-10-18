@@ -1,0 +1,7 @@
+part 8 - Todolist
+
+-Create view for adding to cart ...done
+-Include htmx cdn ...done
+-Create reusable menu cart html ...done
+-Add to cart ...done
+

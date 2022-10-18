@@ -1,0 +1,5 @@
+part 9 - Todolist
+
+-Set up html for the sign up page ...done
+-Set up html for the log in page
+-Add product images

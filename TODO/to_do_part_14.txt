@@ -1,0 +1,8 @@
+part 13 - Todolist
+
+-Show correct products in the cart ...done
+-Show total price in the cart ...done
+-Show total price in the checkout
+-Only allow checkout for authenticated users ...done
+-Show user information in the checkout  ..done
+-Change checkout link in the cart ...done

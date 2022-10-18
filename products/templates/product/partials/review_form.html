@@ -1,0 +1,42 @@
+
+    <h2 class="text-xl"> <strong>Reviews</strong> </h2>
+    {% if request.user.is_authenticated %}
+    <form hx-post="{% url 'product' product.slug%}"  hx-target='#review-id'  method="POST" class="mt-6 mb-6 p-6 bg-gray-100 rounded-xl space-y-3">
+        
+        {% csrf_token %}
+        <div>
+            <label for="rating">Rating</label><br>
+            <select name="rating" id="rating_id" class="w-full px-6 py-4 text-center rounded-xl cursor-pointer">
+                <option {% if review.rating == 1 %}selected{% endif %} value="1">1</option>
+                <option {% if review.rating == 2 %}selected{% endif %} value="2">2</option>
+                <option {% if review.rating == 3 or not review.rating%}selected{% endif %} value="3">3</option>
+                <option {% if review.rating == 4 %}selected{% endif %} value="4">4</option>
+                <option {% if review.rating == 5 %}selected{% endif %} value="5">5</option>
+                <option {% if review.rating == 6 %}selected{% endif %} value="6">6</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="content" class="sr-only">Comment</label><br>
+            <textarea name="content" id="content_id" rows="4"
+                class="px-0 w-full text-sm text-gray-900 bg-white border-0 focus:ring-0 rounded-xl"
+                placeholder="Write a comment..." required>
+                        {{review.content}}
+                </textarea>
+        </div>
+        <div>
+            <button type="submit" hx-post="{% url 'product' product.slug%}"  hx-target='#review-id' class="w-full px-6 py-4 bg-green-500 text-white rounded-xl hover:shadow-lg">Submit</button>
+        </div>
+    </form>
+    {% else %}
+    <div class="max-w-sm rounded overflow-hidden ">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-green-500 ">Please <a href="{% url 'login' %}"
+                    class="underline text-blue-500 hover:text-blue-400 ">login</a> to add review !</div>
+            <p class="text-gray-700 text-base">
+
+            </p>
+        </div>
+    </div>
+    {% endif %}
+

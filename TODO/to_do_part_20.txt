@@ -1,0 +1,8 @@
+part 20 - Todolist
+
+-DONE Create new database model for reviews
+-DONE Create form for reviews
+-Display reviews
+	-DONE Create a model function (get_rating)/products
+-Fix rating ui 
+-Add order without online payment COD 

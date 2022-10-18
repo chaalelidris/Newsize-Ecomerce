@@ -1,0 +1,7 @@
+part 18 - Todolist
+
+-DONE Show errors in the checkout
+-DONE Change ordering for orders
+-DONE Create simple success page
+-DONE Clear cart after checkout
+-DONE Correct prices in the orders page

@@ -1,0 +1,2 @@
+-DONE change add to cart TO view in cart button 
+-DONE make it change without reload (htmx)

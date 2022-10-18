@@ -1,0 +1,5 @@
+part 7 - Todolist
+-Create django app for the cart ...done
+-Create a cart Class ...done
+-Make cart globally available ...done
+

@@ -1,0 +1,7 @@
+part 12 - Todolist
+
+-Add to cart from search/lists ...done
+-Check if image exist firs (product detail) ...done
+-Fix links in the menu ...done
+-Separat urls files ...done
+-Add title to the browser ..done

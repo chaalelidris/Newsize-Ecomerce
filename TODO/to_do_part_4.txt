@@ -1,0 +1,6 @@
+part 4:
+
+-Create html for the category/shop page ...DONE
+-Create html for the product detail page ...DONE
+
+That's it.

@@ -1,0 +1,6 @@
+part 13 - Todolist
+
+-Html for the my account page ...done
+-Add link to my account ...done
+-Edit account page ...done
+-Edit account functionality

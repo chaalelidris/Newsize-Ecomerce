@@ -1,0 +1,33 @@
+{%extends 'core/base.html'%}
+{% block title %}Edit account{% endblock title %}
+{%block content%}
+
+<div class="max-w-6xl mx-auto p-6">
+    <h1 class="mb-5 text-3xl">Edit account</h1>
+
+    <form method="post" action="{% url 'edit_myaccount' %}" class="bg-gray-100 p-6 space-y-3 rounded-xl">
+        {% csrf_token %}
+        <div class="">
+            <label for="first_name">First name</label>
+            <input class="w-full mt-2 py-4 px-6 bg-white rounded-xl" type="text" name="first_name" value="{{request.user.first_name}}">
+        </div>
+        <div class="">
+            <label for="last_name">Last name</label>
+            <input class="w-full mt-2 py-4 px-6 bg-white rounded-xl" type="text" name="last_name" value="{{request.user.last_name}}">
+        </div>
+        <div class="">
+            <label for="username">Username</label>
+            <input class="w-full mt-2 py-4 px-6 bg-white rounded-xl" type="text" name="username" value="{{request.user.username}}">
+        </div>
+        <div class="">
+            <label for="email">Email</label>
+            <input class="w-full mt-2 py-4 px-6 bg-white rounded-xl" type="email" name="email" value="{{request.user.email}}">
+        </div>
+
+        <div>
+            <button class="w-full py-4 px-6 mt-6 bg-green-500 hover:bg-green-600 text-white rounded-xl ">Edit account</button>
+        </div>
+
+    </form>
+</div>
+{%endblock content%}

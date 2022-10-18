@@ -1,0 +1,9 @@
+{% include 'product/partials/alert_success.html' %}   
+{% for review in product.reviews.all %}
+    <div class="px-4 py-6 bg-gray-100 rounded-xl mb-4 ">
+        <strong>Rating: </strong>{{review.rating}}/6 <br>
+        <strong>Rated by: </strong>{{review.created_by}} <br>
+        <strong>Date: </strong>{{review.created_at|date:"Y-M-d"}} <br>
+        <strong>Comment: </strong>{{review.content}} <br>
+    </div>
+{% endfor %}

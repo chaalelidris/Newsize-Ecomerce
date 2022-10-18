@@ -1,0 +1,50 @@
+{%extends 'core/base.html'%}
+{% load edit_var %}
+{% block title %}{{product.name}}{% endblock title %}
+{%block content%}
+
+
+
+<div class="max-w-6xl mx-auto flex flex-wrap bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div class="images w-full mb-6 lg:mb-0 lg:w-3/5">
+        <img class="p-8 rounded-t-lg"
+            src="{% if product.image %}{{product.image.url}}{% else %}https://st4.depositphotos.com/17828278/24401/v/600/depositphotos_244011872-stock-illustration-image-vector-symbol-missing-available.jpg{% endif %}"
+            alt="{{product.name}}">
+    </div>
+    <div class="information px-5 pb-5 lg:w-2/5 lg:mt-6">
+        <h1 class="text-xl mb-6 font-semibold tracking-tight text-gray-900 dark:text-white">
+            <strong>{{product.name}}</strong></h1>
+
+        {% if product.description %}
+        <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{product.description}}</h5>
+        {% else %}
+        <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">No description !</h5>
+        {% endif %}
+
+
+
+        <span hx-get="{% url 'hx_update_review' product.id%}" hx-trigger="update-review from:body" hx-swap="innerHTML">
+            {% include 'product/partials/product_rating.html' %}
+        </span>
+
+        <div class="flex justify-between items-center">
+            <span class="text-3xl font-bold text-gray-900 dark:text-white">{{product.get_display_price}} DZD</span>
+            <span hx-get="{% url 'hx_add_view_cart_btn' product.id%}" hx-trigger="update-product-add-view-btn from:body"
+                hx-swap="innerHTML">
+                {% include 'product/partials/add_view_in_cart_btn.html' %}
+            </span>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="max-w-6xl mx-auto flex flex-wrap py-6 px-6 xl:px-0">
+    <div class="w-full mt-6">
+        {% include 'product/partials/review_form.html' %}
+        <span id="review-id">
+            {% include 'product/partials/review.html' %}
+        </span>
+    </div>
+</div>
+{%endblock content%}

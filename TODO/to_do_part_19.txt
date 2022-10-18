@@ -1,0 +1,12 @@
+part 19 - Todolist
+
+-DONE Clean up the start_order function
+-DONE Move menu_cart.html to partials folder
+-DONE Improve the admin interface
+	-Add filters and search to products
+	-Add filters and search to orders
+	-Show orderitems inline for orders
+-DONE Mobile styling 
+-DONE Fix links in the cart
+-DONE Fix header link on the front page
+-Fix timezone in django

@@ -1,0 +1,10 @@
+part 3:
+
+-Create app for products ...DONE
+-Create database model for category ...DONE
+-Add categories in admin interface ...DONE
+-Create database model for products
+-Add a few products in the admin interface
+-Show products on the front page.
+
+That's it.

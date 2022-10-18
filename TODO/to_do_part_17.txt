@@ -1,0 +1,8 @@
+part 17 - Todolist
+
+-DONE Fix decrement to rero items
+-DONE Install and set up stripe
+-DONE Include public for creating checkout session
+-DONE Create view for creating checkout session
+-DONE Validate checkoutform and implement stripe
+

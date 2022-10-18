@@ -1,0 +1,5 @@
+part 6 - Todolist
+
+-Fix dynamic information in product lists ...done
+-Make product list reusable ...done
+-Show product detail page ...done
