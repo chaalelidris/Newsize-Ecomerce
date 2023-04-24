@@ -1,4 +1,4 @@
-# E-Commerce Project with Django Framework
+# E-Commerce Project with Django Framework (Newsize)
 This is an e-commerce project built with Django, which includes several cool functionalities such as user authentication and authorization, shopping cart, and more.
 
 ## Features
